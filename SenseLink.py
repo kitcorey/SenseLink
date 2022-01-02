@@ -169,7 +169,7 @@ class SenseLink:
         await self._serve()
 
     async def _serve(self):
-        server_start = time()
+        server_start = time.time()
         logging.info("Starting UDP server")
         self._local_ep = await open_local_endpoint('0.0.0.0', self.port)
 
